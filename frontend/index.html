@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Air Quality App</title>
+    <link rel="stylesheet" href="static/style.css"> 
+    <script>
+    if (window.location.pathname !== "/") {
+        history.replaceState({}, "", "/");
+    }
+</script>
+
+       
+</head>
+<body>
+    <div class="container">
+        <h1>Informasi Cuaca & Kualitas Udara</h1>
+        <input type="text" id="cityInput" placeholder="Masukkan nama kota">
+        <button onclick="getCityInfo()">Cek Cuaca</button>
+        <div id="result"></div>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+</html>
