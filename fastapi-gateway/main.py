@@ -10,8 +10,9 @@ load_dotenv()
 app = FastAPI()
 
 # URL dari microservices(express buat cuaca, flask buat kualitas udara)
-EXPRESS_API_URL = "http://127.0.0.1:3001/weather"
-FLASK_API_URL = "http://127.0.0.1:3002/air_quality"
+EXPRESS_API_URL = "http://express-service:3001/weather"
+FLASK_API_URL = "http://flask-service:3002/air_quality"
+
 
 #gak tau apa-solusi dari AI karena sebelumnya gak bisa beriman req dari frontend, mungkin sama kaya yang ada di express cors itu
 app.add_middleware(

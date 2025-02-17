@@ -3,3 +3,5 @@ express = npm run dev (pake modul npm nodemon)
 flask = flask run --port=3002 (masuk ke venv " source venv/Scripts/activate ")
 fastAPI = uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 frontend = python frontend_server.py
+
+docker-compose up --build

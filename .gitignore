@@ -1,0 +1,34 @@
+# 1️⃣ Node.js (Express)
+express-service/node_modules/
+express-service/package-lock.json
+
+# 2️⃣ Python (Flask & FastAPI)
+flask-service/__pycache__/
+flask-service/venv/
+flask-service/.env
+fastapi-gateway/__pycache__/
+fastapi-gateway/venv/
+fastapi-gateway/.env
+
+# 3️⃣ Docker
+**/docker-compose.override.yml
+**/docker-compose.dev.yml
+**/.dockerignore
+**/Dockerfile
+
+# 4️⃣ Environment Variables (API Keys, Secrets)
+.env
+**/.env
+
+
+# 5️⃣ System Files
+.DS_Store
+Thumbs.db
+*.log
+*.pyc
+
+# 6️⃣ VSCode & Python Virtual Environments
+.vscode/
+.idea/
+*.swp
+*.swo

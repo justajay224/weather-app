@@ -1,0 +1,42 @@
+services:
+  express-service:
+    build: ./express-service
+    ports:
+      - "3001:3001"
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+  flask-service:
+    build: ./flask-service
+    ports:
+      - "3002:3002"
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+  fastapi-gateway:
+    build: ./fastapi-gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - express-service
+      - flask-service
+    networks:
+      - app-network
+    env_file:
+      - .env
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    networks:
+      - app-network
+
+
+networks:
+  app-network:
+    driver: bridge
